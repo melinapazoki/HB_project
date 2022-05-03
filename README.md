@@ -2,22 +2,22 @@
 
 
 ## Project Name & Pitch
-Dynamic form with configured json
-An application used for Hellobetter case study
-Language : JavaScript
-UI Library : React
-Web Framework : Express(NodeJs)
+ - Dynamic form with configured json
+ - An application used for Hellobetter case study
+ - Language : JavaScript
+ - Main UI Library : React
+ - Web Framework : Express(NodeJs)
 
 ## packages
 
-express -> web framework
-body-parser -> for parsing request body to Json
-cors -> for making apis accessible from other origins
-concurrently -> to able to run both UI and server together
+- express -> web framework
+- body-parser -> for parsing request body to Json
+- cors -> for making apis accessible from other origins
+- concurrently -> to able to run both UI and server together
 
-react -> UI Library
-style-component -> to write css base style component 
-jest -> write test 
+ - react -> UI js library
+ -  style-component -> to write css base style component 
+ - jest -> write test 
 
 ## Project Technologies
 
