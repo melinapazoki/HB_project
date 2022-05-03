@@ -15,11 +15,11 @@ import ErrorMessage from "../components/formElements/Error";
 import { uiValidationPattern } from "../constants/commonConstants";
 
 const SignUpForm = () => {
-	const { data } = useFetchData();
+	const { data, loading } = useFetchData();
 
 	const [errorMessage, setError] = useState("");
 	const [sections, setData] = useState({});
-	const {validation} = data
+	const { validation } = data;
 
 	useEffect(() => {
 		const { sections } = data;
@@ -34,9 +34,9 @@ const SignUpForm = () => {
 			return;
 		}
 		setError("");
-		console.log('Congrats...! form is validated ')
+		console.log("Congrats...! form is validated ");
 	};
-	if(!loading){
+	if (loading) {
 		return null;
 	}
 	return (

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import givenData from "../data/data.json";
+import config from "../config";
 
 const useFetchData = () => {
 	const [data, setData] = useState({});
@@ -7,12 +7,17 @@ const useFetchData = () => {
 
 	useEffect(() => {
 		const timer = setTimeout(() => {
-			setData(givenData);
+			fetchFormData();
 			setLoading(false);
 		}, 1000);
 		return () => clearTimeout(timer);
 	}, []);
 
+	const fetchFormData = () => {
+		return fetch(config.API_URL)
+			.then((response) => response.json())
+			.then((data) => setData(data));
+	};
 	return { data, loading };
 };
 

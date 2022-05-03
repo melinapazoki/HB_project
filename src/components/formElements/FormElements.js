@@ -6,8 +6,9 @@ import CheckBoxInput from "../formElements/CheckBoxInput";
 import {
 	componentType,
 	uiValidationPattern,
+	validationUIType,
 } from "../../constants/commonConstants";
-import { validationUIType , validateEmail, validatePassword } from "../../utils/customUtils";
+import { validateEmail, validatePassword } from "../../utils/customUtils";
 
 const FormElements = ({ field, validation }) => {
 	const { component, name } = field;
@@ -76,6 +77,7 @@ const FormElements = ({ field, validation }) => {
 					field={field}
 					onCheckboxChange={onCheckboxChange}
 					checked={isChecked}
+					errorMessage={errorMsg}
 				/>
 			)}
 		</>
