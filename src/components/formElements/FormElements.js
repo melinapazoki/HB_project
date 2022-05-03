@@ -22,7 +22,6 @@ const FormElements = ({ field, validation }) => {
 	const isRequired = schema.properties[name]?.required;
 	const errorMessage = errMessages[name]?.required;
 	const patternError = errMessages[name]?.format;
-
 	const handleOnBlur = (event) => {
 		event.preventDefault();
 		const value = event.target.value;
@@ -50,6 +49,11 @@ const FormElements = ({ field, validation }) => {
 
 	const onCheckboxChange = () => {
 		setIsChecked(!isChecked);
+		if (isChecked) {
+			setError(errorMessage);
+			return;
+		}
+		setError("");
 	};
 	return (
 		<>
