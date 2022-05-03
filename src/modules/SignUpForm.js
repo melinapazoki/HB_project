@@ -19,6 +19,7 @@ const SignUpForm = () => {
 
 	const [errorMessage, setError] = useState("");
 	const [sections, setData] = useState({});
+	const {validation} = data
 
 	useEffect(() => {
 		const { sections } = data;
@@ -33,7 +34,11 @@ const SignUpForm = () => {
 			return;
 		}
 		setError("");
+		console.log('Congrats...! form is validated ')
 	};
+	if(!loading){
+		return null;
+	}
 	return (
 		<Row alignItems="center" justifyContent="center">
 			<Col sm={12} md={6} xl={4}>
@@ -46,14 +51,14 @@ const SignUpForm = () => {
 					shadow="md">
 					<Form noValidate onSubmit={handleSubmit}>
 						<Col sm={12}>
-							<Text fontSize="md">{data?.validation?.schema?.title}</Text>
+							<Text fontSize="md">Signup form</Text>
 						</Col>
 						<Col sm={12}>
 							{sections[0]?.fields.map((field) => (
 								<FormElements
 									key={field.name}
 									field={field}
-									validation={data?.validation}
+									validation={validation}
 								/>
 							))}
 						</Col>

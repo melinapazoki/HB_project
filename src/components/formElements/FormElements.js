@@ -7,7 +7,7 @@ import {
 	componentType,
 	uiValidationPattern,
 } from "../../constants/commonConstants";
-import { validateEmail, validatePassword } from "../../utils/customUtils";
+import { validationUIType , validateEmail, validatePassword } from "../../utils/customUtils";
 
 const FormElements = ({ field, validation }) => {
 	const { component, name } = field;
@@ -17,6 +17,7 @@ const FormElements = ({ field, validation }) => {
 	const [errorMsg, setError] = useState("");
 	const [isVisible, setVisiblity] = useState(false);
 	const [isChecked, setIsChecked] = useState(false);
+
 	const isRequired = schema.properties[name]?.required;
 	const errorMessage = errMessages[name]?.required;
 	const patternError = errMessages[name]?.format;
