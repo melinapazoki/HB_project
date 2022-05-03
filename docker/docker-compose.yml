@@ -1,8 +1,8 @@
 version: "3.3"
 services:
   webui:
-    container_name: HB_project
-    image: HB_project:latest
+    container_name: json-dynamic-form-project
+    image: json-dynamic-form-project:latest
     build:
       context: ../
       dockerfile: ./docker/Dockerfile
@@ -11,5 +11,5 @@ services:
     volumes:
       - ../:/data/app/
     ports:
-      - "3001:3001"
+      - "3003:3003"
     restart: always

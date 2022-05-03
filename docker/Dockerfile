@@ -6,4 +6,4 @@ ENV PATH /data/node_modules/.bin:$PATH
 COPY . /data/app/
 WORKDIR /data/app/
 
-CMD ["npm", "run" , 'dev']
+CMD ["npm", "run" , "dev"]
