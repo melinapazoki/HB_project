@@ -33,18 +33,18 @@
 
 - Clone down this repository. You will need `node` and `npm` installed globally on your machine.
 
-Installation:`npm install`
-run project: `npm run dev`
-To Run Test Suite: `npm test`
-To Visit App:`http://localhost:3000`
+- Installation:`npm install`
+- run project: `npm run dev`
+- To Run Test Suite: `npm test`
+- To Visit App:`http://localhost:3000`
 
 or
 
 - you can use docker and see result.
-  Clone the repo
-  Go to docker directory -> `cd docker`
-  In terminal -> `docker-compose up` OR `docker-compose up -d`
-  After docker build completed, you can access the web app at port 3001 -> `http://localhost:3001`
+  - Clone the repo
+  - Go to docker directory -> `cd docker`
+  - In terminal -> `docker-compose up` OR `docker-compose up -d`
+  - After docker build completed, you can access the web app at port 3001 -> `http://localhost:3001`
 
   ## useful Hints
 
@@ -65,13 +65,21 @@ or
 - Custom hook pattern
 - Props getter pattern
 
-## Design
-- 
+## How I design the project
+- Whole project is in theme provider wapper and all of css should read from there
+- Application has 3 main part which is defined aslayer (header - body - footer)
+- Forms render in body part 
+- Form components: 
+    - signupform 
+        - FormElements
+            - textInput ,etc.   
+                - Input 
+                - error Message component
 
 
 ## test
 
-some small unit test did by jest.
+some unit test by jest.
 
 
 ## How commit the code to
