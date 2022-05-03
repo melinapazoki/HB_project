@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "src",
+			"path": "."
+		},
+		{
+			"name": "HB_project",
+			"path": "../../../finalHelloBetter/HB_project"
+		}
+	],
+	"settings": {}
+}
