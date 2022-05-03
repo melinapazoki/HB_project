@@ -26,7 +26,7 @@ const FormElements = ({ field, validation }) => {
 		event.preventDefault();
 		const value = event.target.value;
 		if (!event.target.checkValidity()) {
-			if (value && name === "email" && !validateEmail(value)) {
+			if (value && name === validationUIType.EMAIL && !validateEmail(value)) {
 				setError(patternError);
 				return;
 			}
